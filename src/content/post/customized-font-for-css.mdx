@@ -1,10 +1,10 @@
 ---
-title: "CSS自定义字体实践"
-description: "CSS自定义字体实践"
-publishDate: "2015-11-15"
+title: 'CSS自定义字体实践'
+description: 'CSS自定义字体实践'
+publishDate: '2015-11-15'
 ---
 
-import { Image } from "astro:assets"
+import { Image } from 'astro:assets'
 
 近日写移动端页面要写一个日历，设计师MM指着设计稿上的数字曰：这是方正喵呜体，然后又指着上面的星期几曰：这是方正少儿简体，你看着办吧。我心里呵呵。我说字体问题稍后再说吧。人家掷地有声的强调：不行，不行的话一个一个的切成图......
 
@@ -50,14 +50,14 @@ import { Image } from "astro:assets"
 
 ```css
 @font-face {
-  font-family: "MiaoWuShaoEr";
+  font-family: 'MiaoWuShaoEr';
   src:
-    url("/fonts/MomosoMiaoWu.ttf") format("truetype"),
-    url("/fonts/MomosoMiaoWu.woff") format("woff");
+    url('/fonts/MomosoMiaoWu.ttf') format('truetype'),
+    url('/fonts/MomosoMiaoWu.woff') format('woff');
 }
 
 .calendar {
-  font-family: "MiaoWuShaoEr";
+  font-family: 'MiaoWuShaoEr';
 }
 ```
 

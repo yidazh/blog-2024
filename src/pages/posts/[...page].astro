@@ -1,11 +1,11 @@
 ---
-import type { GetStaticPaths, Page } from "astro"
-import type { CollectionEntry } from "astro:content"
+import type { GetStaticPaths, Page } from 'astro'
+import type { CollectionEntry } from 'astro:content'
 
-import Pagination from "@/components/Paginator.astro"
-import PostPreview from "@/components/blog/PostPreview.astro"
-import PageLayout from "@/layouts/Base.astro"
-import { getAllPosts, getUniqueTags, sortMDByDate } from "@/data/post"
+import Pagination from '@/components/Paginator.astro'
+import PostPreview from '@/components/blog/PostPreview.astro'
+import PageLayout from '@/layouts/Base.astro'
+import { getAllPosts, getUniqueTags, sortMDByDate } from '@/data/post'
 
 export const getStaticPaths = (async ({ paginate }) => {
   const allPosts = await getAllPosts()
@@ -15,15 +15,15 @@ export const getStaticPaths = (async ({ paginate }) => {
 }) satisfies GetStaticPaths
 
 interface Props {
-  page: Page<CollectionEntry<"post">>
+  page: Page<CollectionEntry<'post'>>
   uniqueTags: string[]
 }
 
 const { page, uniqueTags } = Astro.props
 
 const meta = {
-  description: "Ready my collection of posts and the things that interest me",
-  title: "Posts",
+  description: 'Ready my collection of posts and the things that interest me',
+  title: 'Posts',
 }
 
 const paginationProps = {
@@ -48,7 +48,7 @@ const paginationProps = {
     <section aria-label="Blog post list">
       <ul class="space-y-8 text-start">
         {
-          page.data.map(p => (
+          page.data.map((p) => (
             <li class="flex flex-col flex-wrap gap-2 sm:flex-row [&_q]:basis-full">
               <PostPreview as="h2" post={p} />
             </li>
@@ -80,7 +80,7 @@ const paginationProps = {
             Tags
           </h2>
           <ul class="flex flex-wrap gap-2 text-bgColor">
-            {uniqueTags.map(tag => (
+            {uniqueTags.map((tag) => (
               <li>
                 <a
                   aria-label={`View all posts with the tag: ${tag}`}
