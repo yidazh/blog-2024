@@ -5,8 +5,9 @@ publishDate: '2017-02-12'
 ---
 
 import { Image } from 'astro:assets'
+import cover from '@/assets/images/covers_wide.jpg'
 
-<Image src="/images/covers_wide.jpg" width={500} height={281} alt="frontend" />
+<Image src={cover} width={500} height={281} quality={100} alt="frontend" />
 
 2017的钟声已敲响快一个月了，2016也离我们越来越远。启程回家之前，想写点关于读书的。多读书在知乎上早已是政治正确了，但想来我却是个没有读书习惯的人，即便是现在写文字时，我也自认为我是抱着功利心去读书的。
 
